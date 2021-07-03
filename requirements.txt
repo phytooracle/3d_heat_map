@@ -3,3 +3,4 @@ numpy==1.19.1
 pyproj==1.9.5.1
 tifffile==2020.9.3
 opencv-python==3.4.2.16
+open3d==0.12.0
