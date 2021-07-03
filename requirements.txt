@@ -1,0 +1,5 @@
+GDAL==3.0.4
+numpy==1.19.1
+pyproj==1.9.5.1
+tifffile==2021.6.14
+opencv-python==3.4.2.16
