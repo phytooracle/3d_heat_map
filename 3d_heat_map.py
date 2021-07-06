@@ -33,6 +33,7 @@ def get_args():
                         help='Orthomosaic in TIFF format.',
                         metavar='str',
                         type=str,
+                        nargs='+',
                         required=True)
     
     parser.add_argument('-o',
@@ -65,8 +66,8 @@ def main():
     downsampled_pcd = load_pcd(args.downsampled_pointcloud)
 
     # Open orthomosaic and collect coordinates.
-    main_ortho = load_full_ortho(args.tiff)
-    ortho_coords = get_coord_from_tiff(args.tiff)
+    main_ortho = load_full_ortho(args.tiff[0])
+    ortho_coords = get_coord_from_tiff(args.tiff[0])
 
     # Generate heatmap from the downsampled pointcloud.
     pcd_image_main,pcd_bounds,pcd_bounds_utm = generate_height_image_from_pcd(downsampled_pcd,main_ortho,ortho_coords)
