@@ -10,7 +10,8 @@ import numpy as np
 import math
 import csv
 from pyproj import Proj, transform
-from pyproj import Transformer, transform
+from pyproj import transform
+from pyproj import *
 from scipy.optimize import lsq_linear
 
 UTM2latlon_transformer = Transformer.from_crs(2152, 4326)
