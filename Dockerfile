@@ -17,7 +17,8 @@ RUN apt-get install -y python3.6-dev \
                        apt-utils \
                        ffmpeg \
                        libsm6 \
-                       libxext6
+                       libxext6 \
+                       vim
 
 RUN add-apt-repository ppa:ubuntugis/ubuntugis-unstable
 RUN apt-get update
